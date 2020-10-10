@@ -24,10 +24,6 @@ class MainPage extends Component {
         })
     }
 
-    componentDidMount() {
-        this.getPosts()
-    }
-
     handleChange(event) {
         let property = event.target.name
         let value = event.target.value
@@ -46,8 +42,14 @@ class MainPage extends Component {
         })
     }
 
+    componentDidMount() {
+        this.getPosts()
+    }
+
     render() {
+        
         let { title, content, img, author, posts } = this.state
+
         return (
             <Container fluid>
                 <Row>
